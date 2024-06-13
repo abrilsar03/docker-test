@@ -61,7 +61,7 @@ const Home = () => {
         <CardBody>
           <CardTitle tag="h1" className="pb-4">Todo List</CardTitle>
           <ListGroup className="pb-4">
-            {todos.map((todo) => {
+            {todos.length === 0? <p>Nothing's come up yet</p>: todos.map((todo) => {
               return (
                 <ListGroupItem
                   title="Click this to complete."
