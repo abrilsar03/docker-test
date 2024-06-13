@@ -57,9 +57,9 @@ const Home = () => {
 
   return (
     <>
-      <Card>
+      <Card className="pt-4">
         <CardBody>
-          <CardTitle tag="h1">New PRUEBA</CardTitle>
+          <CardTitle tag="h1" className="pb-2">To do List</CardTitle>
           <ListGroup>
             {todos.map((todo) => {
               return (
@@ -87,7 +87,7 @@ const Home = () => {
               );
             })}
           </ListGroup>
-          <Button onClick={() => setModalOpen(true)} color="primary">
+          <Button  className="pt-4" onClick={() => setModalOpen(true)} color="primary">
             Add Todo
           </Button>
         </CardBody>
