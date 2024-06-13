@@ -59,7 +59,7 @@ const Home = () => {
     <>
       <Card>
         <CardBody>
-          <CardTitle tag="h1">New PRUEBA</CardTitle>
+          <CardTitle tag="h1" className="pb-4">Todo List</CardTitle>
           <ListGroup>
             {todos.map((todo) => {
               return (
@@ -68,6 +68,7 @@ const Home = () => {
                   key={todo._id}
                   action
                   tag="a"
+                  className="pb-4"
                 >
                   <div className="d-flex w-100 justify-content-between">
                     <div className="form-check">
@@ -78,11 +79,11 @@ const Home = () => {
                         value="foobar"
                         defaultChecked={todo.is_complete}
                       />
+                      <h5>Description: {todo.title}</h5>
                     </div>
-                    <h5>{todo.title}</h5>
                     <small>Due: {todo.due_date}</small>
                   </div>
-                  <p className="mb-1">{todo.description}</p>
+                  <p className="mb-1 pl-4">{todo.description}</p>
                 </ListGroupItem>
               );
             })}
@@ -93,8 +94,8 @@ const Home = () => {
         </CardBody>
       </Card>
       <Modal isOpen={modalOpen}>
-        <ModalHeader toggle={() => setModalOpen(!modalOpen)}>
-          Add new Todo
+        <ModalHeader className='' toggle={() => setModalOpen(!modalOpen)}>
+          Add Todo
         </ModalHeader>
         <ModalBody>
           <TodoForm saveTodo={handleNewTodo} />

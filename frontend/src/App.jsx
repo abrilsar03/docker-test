@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container">
+    <div className="container py-4 mt-4">
       <Home />
     </div>
   );
