@@ -60,7 +60,7 @@ const Home = () => {
       <Card>
         <CardBody>
           <CardTitle tag="h1" className="pb-4">Todo List</CardTitle>
-          <ListGroup>
+          <ListGroup className="pb-4">
             {todos.map((todo) => {
               return (
                 <ListGroupItem
@@ -68,7 +68,6 @@ const Home = () => {
                   key={todo._id}
                   action
                   tag="a"
-                  className="pb-4"
                 >
                   <div className="d-flex w-100 justify-content-between">
                     <div className="form-check">
@@ -79,11 +78,11 @@ const Home = () => {
                         value="foobar"
                         defaultChecked={todo.is_complete}
                       />
-                      <h5>Description: {todo.title}</h5>
+                      <h5>{todo.title}</h5>
                     </div>
                     <small>Due: {todo.due_date}</small>
                   </div>
-                  <p className="mb-1 pl-4">{todo.description}</p>
+                  <p className="mb-1 pl-4">Description: {todo.description}</p>
                 </ListGroupItem>
               );
             })}
