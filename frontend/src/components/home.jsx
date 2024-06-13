@@ -69,7 +69,7 @@ const Home = () => {
                   action
                   tag="a"
                 >
-                  <div className="d-flex w-100 justify-content-between">
+                  <div className="d-flex w-64 justify-content-between">
                     <div className="form-check">
                       <input
                         className="form-check-input"
@@ -80,7 +80,7 @@ const Home = () => {
                       />
                       <h5>{todo.title}</h5>
                     </div>
-                    <small>Due: {todo.due_date}</small>
+                    <small>Due: {todo.due_date.split('T')[0]}</small>
                   </div>
                   <p className="mb-1 pl-4">Description: {todo.description}</p>
                 </ListGroupItem>
